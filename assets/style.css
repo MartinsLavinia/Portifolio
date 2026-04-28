@@ -52,7 +52,14 @@ section {
 
 .card {
     margin: 1%;
+    box-shadow: 0 8px 20px rgba(4, 117, 231, 0.2);
 }
+
+.progress-bar {
+    background-color: #5eb4ff;
+    
+}
+
 
 .btn-destaque {
     background: linear-gradient(70deg, #0c508b, #4facfe);
