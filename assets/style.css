@@ -139,6 +139,13 @@ section {
     border-color: #0c508b;
 }
 
+.card:hover {
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 15px rgba(26, 130, 233, 0.726);
+    transform: translateY(-5px);
+    border-color: rgba(26, 130, 233, 0.726) ;
+}
+
 /*Detalhe das tags*/
 .tags {
     margin-top: 10px;
