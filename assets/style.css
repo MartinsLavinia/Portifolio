@@ -25,6 +25,12 @@ b {
     border-radius: 15px;
 }
 
+.nav-item:hover {
+    transition: transform 0.3s ease;
+    transform: translateY(-3px);
+    border-color: #0c508b;
+}
+
 .perfil {
     border: none;
     width: 100%;
@@ -52,7 +58,7 @@ section {
 
 .card {
     margin: 1%;
-    box-shadow: 0 8px 20px rgba(4, 117, 231, 0.2);
+    box-shadow: 0 8px 15px rgba(64, 149, 235, 0.507);
 }
 
 .progress-bar {
@@ -60,6 +66,20 @@ section {
     
 }
 
+.btn-commum {
+    background-color: transparent;
+    color: rgb(12, 80, 139);
+    border: 2px solid rgb(12, 80, 139);
+    padding: 10px 15px;
+    border-radius: 25px;
+}
+
+.btn-commum:hover {
+    color: rgb(12, 80, 139);
+    border: 2px solid rgb(12, 80, 139);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
 
 .btn-destaque {
     background: linear-gradient(70deg, #0c508b, #4facfe);
@@ -76,17 +96,106 @@ section {
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-.btn-commum {
-    background-color: transparent;
-    color: rgb(12, 80, 139);
-    border: 2px solid rgb(12, 80, 139);
-    padding: 10px 15px;
-    border-radius: 25px;
+/*Cards de tecnologias*/
+.skill-card .card-body {
+    display: flex;
+    flex-direction: column;
 }
 
-.btn-commum:hover {
-    color: rgb(12, 80, 139);
-    border: 2px solid rgb(12, 80, 139);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+.skill-card i {
+    font-size: 2rem;
+}
+
+.skill-card img {
+    width: 32px;
+    height: 32px;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #0c508b;
+}
+
+.linha {
+    border-left: 4px solid #0c508b;
+    padding-left: 30px;
+}
+
+.skill-card:hover {
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 15px rgba(10, 76, 141, 0.507);
+    transform: translateY(-5px);
+    border-color: #0c508b;
+}
+
+/*Detalhe das tags*/
+.tags {
+    margin-top: 10px;
+}
+
+.bg-dt {
+    padding: 6px 12px;
+    border-radius: 15px;
+    color: black;
+    border: 1px solid rgba(19, 183, 189, 0.726);
+    box-shadow: 0 2px 5px rgba(19, 183, 189, 0.726);
+    margin: 2px;
+}
+
+.modal-content {
+    padding: 10px;
+}
+
+.modal-title {
+    font-weight: 600;
+    font-family: 'Resolide Serif';
+}
+
+/* Títulos das seções */
+.modal-body h2 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #0c508b;
+}
+
+.modal-body img {
+    border-radius: 12px;
+}
+
+
+.frase-img {
+    width: 100%;
+    max-width: 500px; /* controla o tamanho no desktop */
+    height: auto;
+}
+
+/*Footer*/
+.custom-footer {
+    background-color: #121212;
+    color: #eaeaea;
+    margin-top: 50px;
+    border-top: 1px solid rgba(19, 183, 189, 0.3);
+}
+
+.footer-link {
+    color: #eaeaea;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: 0.2s;
+}
+
+.footer-link:hover {
+    color: #13b7bd;
 }

@@ -1,49 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="assets/style.css">
     <title>Portifólio - Lavínia Martins</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-sm custom-nav">
+    <nav class="navbar navbar-expand-sm navbar-dark custom-nav">
         <div class="container-fluid">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active text-white" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#SobreMim">Sobre mim</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#Projetos">Projetos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#Contato">Contato</a>
-                </li>
-            </ul>
+
+            <!-- botão hamburguer -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#SobreMim">Sobre mim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#Projetos">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#Contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-        <div class="container">
-            <div class="row align-items-center" >
+    <div class="container">
+        <div class="row align-items-center">
 
-                <div class="col-md-6">
+            <div class="col-md-6">
                 <h1 id="destaque-nome">Lavínia Martins</h1>
                 <h2>Full Stack Developer</h2>
 
                 <a href="#Projetos" class="btn btn-destaque">Projetos</a>
                 <a href="#Contato" class="btn btn-commum">Contato</a>
-                </div>
-
-                <div class="col-md-6 text-md-end">
-                    <img src="assets/images/perfil-lavinia.png" class="img-fluid perfil" alt="Perfil-Lavínia">
-                </div>
-
             </div>
+
+            <div class="col-md-6 text-md-end">
+                <img src="assets/images/perfil-lavinia.png" class="img-fluid perfil" alt="Perfil-Lavínia">
+            </div>
+
         </div>
+    </div>
 
     <!-- Sobre mim -->
     <section id="SobreMim" class="sessao-azul">
@@ -55,11 +68,14 @@
                     <img id="lavinia-img2" src="assets/images/perfil-lavinia2.png" alt="Perfil Lavinia 2">
                 </div>
                 <div class="col-md-6">
-                    <p><b>Olá, sou a Lavínia</b>, estudante de Desenvolvimento de Software Multiplataforma na FATEC de SJC, com foco em desenvolvimento front-end e organização de projetos. 
-                        Tenho perfil colaborativo, gosto de trabalhar em equipe e contribuir na resolução de problemas de forma prática.
+                    <p><b>Olá, sou a Lavínia</b>, estudante de Desenvolvimento de Software Multiplataforma na FATEC de
+                        SJC, com foco em desenvolvimento front-end e organização de projetos.
+                        Tenho perfil colaborativo, gosto de trabalhar em equipe e contribuir na resolução de problemas
+                        de forma prática.
                     </p>
                     <hr>
-                    <p><b>Meu Objetivo é </b>aplicar meus conhecimentos em projetos reais, criando soluções funcionais e bem estruturadas, enquanto continuo evoluindo como desenvolvedora</p>
+                    <p><b>Meu Objetivo é </b>aplicar meus conhecimentos em projetos reais, criando soluções funcionais e
+                        bem estruturadas, enquanto continuo evoluindo como desenvolvedora</p>
                 </div>
 
             </div>
@@ -67,175 +83,421 @@
     </section>
 
     <section id="Tecnologias">
-    <div class="container">
-        <h1>Tecnologias</h1>
-        <p>Ferramentas que utilizo no desenvolvimento dos meus projetos:</p>
+        <div class="container">
+            <h1>Tecnologias</h1>
+            <p>Ferramentas que utilizo no desenvolvimento dos meus projetos:</p>
 
-        <button class="btn btn-commum" onclick="filtrar('hard')">Hard-skills</button>
-        <button class="btn btn-commum" onclick="filtrar('soft')">Soft-skills</button>
+            <button class="btn btn-commum btn-filtro btn-destaque" onclick="filtrar('hard', this)">Hard-skills</button>
+            <button class="btn btn-commum btn-filtro" onclick="filtrar('soft', this)">Soft-skills</button>
 
-        <div class="row">
+            <div class="row">
 
-        <!--Hard Skills -->
-        <div class="card col-6 col-md-4 col-lg-3 skill-card" data-skill="hard">
-            <div class="card-body">
-            <h3>HTML</h3>
-            <p>Estrutura de páginas web</p>
-            <div class="progress">
-                <div class="progress-bar" style="width: 80%;">80%</div>
-            </div>
+                <!--Hard Skills -->
+                <div class="card col-md-6 col-lg-4 col-xl-3 skill-card" data-skill="hard">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="devicon-html5-plain colored"></i>
+                            <h5 class="mb-0">HTML</h5>
+                        </div>
+                        <p>Estrutura de páginas web</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 80%;">80%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card col-md-6 col-lg-4 col-xl-3 skill-card" data-skill="hard">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="devicon-css3-plain colored"></i>
+                            <h5 class="mb-0">CSS</h5>
+                        </div>
+                        <p>Estilização e layout responsivo</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 65%;">65%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card col-md-6 col-lg-4 col-xl-3 skill-card" data-skill="hard">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <h5 class="mb-0">JavaScript</h5>
+                        </div>
+                        <p>Interatividade e lógica no front-end</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 30%;">30%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card col-md-6 col-lg-4 col-xl-3 skill-card" data-skill="hard">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                            <h5 class="mb-0">Python</h5>
+                        </div>
+                        <p>Lógica e desenvolvimento back-end</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 80%;">80%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card col-md-6 col-lg-4 col-xl-3 skill-card" data-skill="hard">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="devicon-php-plain colored"></i>
+                            <h5 class="mb-0">PHP</h5>
+                        </div>
+                        <p>Hypertext Preprocessor</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 70%;">70%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card col-md-6 col-lg-4 col-xl-3 skill-card" data-skill="hard">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" />
+                            <h5 class="mb-0">Bootstrap</h5>
+                        </div>
+                        <p>Framework de layout responsivo e componentes</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 40%;">40%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card col-md-6 col-lg-4 col-xl-3 skill-card" data-skill="hard">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="devicon-git-plain colored"></i>
+                            <h5 class="mb-0">GIT</h5>
+                        </div>
+                        <p>Controle de versão e organização do código</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 60%;">60%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card col-md-6 col-lg-4 col-xl-3 skill-card" data-skill="hard">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="devicon-github-plain colored"></i>
+                            <h5 class="mb-0">Git Hub</h5>
+                        </div>
+                        <p>Hospedagem de projetos e colaboração em código</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 70%;">70%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Soft Skills -->
+                <div class="card col-md-6 col-lg-4 col-xl-3 skill-card" data-skill="soft">
+                    <div class="card-body">
+                        <h3>Trabalho em equipe</h3>
+                        <p>Disposição para colaborar e contribuir em equipe</p>
+                    </div>
+                </div>
+
+                <div class="card col-md-6 col-lg-4 col-xl-3 skill-card" data-skill="soft">
+                    <div class="card-body">
+                        <h3>Proatividade</h3>
+                        <p>Busca constante por melhorias e novas soluções</p>
+                    </div>
+                </div>
+
+                <div class="card col-md-6 col-lg-4 col-xl-3 skill-card" data-skill="soft">
+                    <div class="card-body">
+                        <h3>Comunicação</h3>
+                        <p>Comunicação clara na troca de ideias e soluções</p>
+                    </div>
+                </div>
+
+                <div class="card col-md-6 col-lg-4 col-xl-3 skill-card" data-skill="soft">
+                    <div class="card-body">
+                        <h3>Resolução de problemas</h3>
+                        <p>Capacidade de analisar e resolver problemas de forma prática</p>
+                    </div>
+                </div>
+
             </div>
         </div>
-
-        <div class="card col-6 col-md-4 col-lg-3 skill-card" data-skill="hard">
-            <div class="card-body">
-            <h3>CSS</h3>
-            <p>Estilização e layout responsivo</p>
-            <div class="progress">
-                <div class="progress-bar" style="width: 65%;">65%</div>
-            </div>
-            </div>
-        </div>
-
-        <div class="card col-6 col-md-4 col-lg-3 skill-card" data-skill="hard">
-            <div class="card-body">
-            <h3>JavaScript</h3>
-            <p>Interatividade e lógica no front-end</p>
-            <div class="progress">
-                <div class="progress-bar" style="width: 30%;">30%</div>
-            </div>
-            </div>
-        </div>
-
-        <div class="card col-6 col-md-4 col-lg-3 skill-card" data-skill="hard">
-            <div class="card-body">
-            <h3>Python</h3>
-            <p>Lógica e desenvolvimento back-end</p>
-            <div class="progress">
-                <div class="progress-bar" style="width: 80%;">80%</div>
-            </div>
-            </div>
-        </div>
-
-        <div class="card col-6 col-md-4 col-lg-3 skill-card" data-skill="hard">
-            <div class="card-body">
-            <h3>PHP</h3>
-            <p>Hypertext Preprocessor</p>
-            <div class="progress">
-                <div class="progress-bar" style="width: 70%;">70%</div>
-            </div>
-            </div>
-        </div>
-
-        <div class="card col-6 col-md-4 col-lg-3 skill-card" data-skill="hard">
-            <div class="card-body">
-            <h3>Bootstrap</h3>
-            <p>Framework de layout responsivo e componentes</p>
-            <div class="progress">
-                <div class="progress-bar" style="width: 40%;">40%</div>
-            </div>
-            </div>
-        </div>
-
-        <div class="card col-6 col-md-4 col-lg-3 skill-card" data-skill="hard">
-            <div class="card-body">
-            <h3>Git</h3>
-            <p>Controle de versão e organização do código</p>
-            <div class="progress">
-                <div class="progress-bar" style="width: 60%;">60%</div>
-            </div>
-            </div>
-        </div>
-
-        <div class="card col-6 col-md-4 col-lg-3 skill-card" data-skill="hard">
-            <div class="card-body">
-            <h3>GitHub</h3>
-            <p>Hospedagem de projetos e colaboração em código</p>
-            <div class="progress">
-                <div class="progress-bar" style="width: 70%;">70%</div>
-            </div>
-            </div>
-        </div>
-
-        <!--Soft Skills -->
-        <div class="card col-6 col-md-4 col-lg-3 skill-card" data-skill="soft">
-            <div class="card-body">
-            <h3>Trabalho em equipe</h3>
-            <p>Disposição para colaborar e contribuir em equipe</p>
-            </div>
-        </div>
-
-        <div class="card col-6 col-md-4 col-lg-3 skill-card" data-skill="soft">
-            <div class="card-body">
-            <h3>Proatividade</h3>
-            <p>Busca constante por melhorias e novas soluções</p>
-            </div>
-        </div>
-
-        <div class="card col-6 col-md-4 col-lg-3 skill-card" data-skill="soft">
-            <div class="card-body">
-            <h3>Comunicação</h3>
-            <p>Comunicação clara na troca de ideias e soluções</p>
-            </div>
-        </div>
-
-        <div class="card col-6 col-md-4 col-lg-3 skill-card" data-skill="soft">
-            <div class="card-body">
-            <h3>Resolução de problemas</h3>
-            <p>Capacidade de analisar e resolver problemas de forma prática</p>
-            </div>
-        </div>
-
-        </div>
-    </div>
     </section>
 
     <!-- Projetos -->
     <section id="Projetos" class="sessao-azul">
         <div class="container">
             <h1>Projetos</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe eveniet quas aperiam consequuntur, nulla voluptatem qui dignissimos sed reiciendis suscipit in rerum soluta accusamus vero sapiente architecto totam labore expedita!lorem</p>
+            <p>Aqui você encontra alguns dos projetos que desenvolvi e contribui, aplicando na prática meus
+                conhecimentos e evoluindo a cada novo desafio.</p>
+            <div class="row">
 
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">Projeto 1</h3>
-                        <p class="card-text">Descrição do projeto 1</p>
+                <div class="card col-md-4">
+                    <div class="card-body" data-bs-toggle="modal" data-bs-target="#modalRadarCidadao">
+                        <img src="assets/images/radar_cidadao.png" alt="Projeto 1" class="img-fluid mb-3">
+                        <div class="tags">
+                            <span class="badge bg-dt">Python</span>
+                            <span class="badge bg-dt">Flask</span>
+                            <span class="badge bg-dt">Bootstrap</span>
+                            <span class="badge bg-dt">HTML</span>
+                            <span class="badge bg-dt">CSS</span>
+                            <span class="badge bg-dt">JavaScript</span>
+                        </div>
+                        <h3 class="card-title">Radar Cidadão</h3>
+                        <p class="card-text">Aplicação web desenvolvida a partir da API da Câmara dos Deputados, com
+                            foco em
+                            apresentar dados públicos de forma clara, organizada e acessível para diferentes perfis de
+                            usuários, como cidadãos, jornalistas e professores.</p>
                     </div>
                 </div>
+
+                <div class="card col-md-4">
+                    <div class="card-body" data-bs-toggle="modal" data-bs-target="#modalPoluicao">
+                        <img src="assets/images/site_poluicao1.png" alt="Projeto 1" class="img-fluid mb-3">
+                        <div class="tags">
+                            <span class="badge bg-dt">PHP</span>
+                            <span class="badge bg-dt">HTML</span>
+                            <span class="badge bg-dt">CSS</span>
+                            <span class="badge bg-dt">JavaScript</span>
+                        </div>
+                        <h3 class="card-title">Monitoramento da Poluição Urbana</h3>
+                        <p class="card-text">Aplicação web que utiliza dados em tempo real via API para monitorar
+                            indicadores ambientais, como qualidade do ar, temperatura e clima, com foco também na
+                            conscientização dos usuários e registro de ações.</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
+
     </section>
+
+    <!--Modal projeto Radar Cidadão-->
+    <div class="modal fade" id="modalRadarCidadao">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Radar Cidadão</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/images/radar_cidadao.png" alt="Radar Cidadão" class="img-fluid mb-3">
+
+                    <div class="tags">
+                        <span class="badge bg-dt">Python</span>
+                        <span class="badge bg-dt">Flask</span>
+                        <span class="badge bg-dt">Bootstrap</span>
+                        <span class="badge bg-dt">HTML</span>
+                        <span class="badge bg-dt">CSS</span>
+                        <span class="badge bg-dt">JavaScript</span>
+                    </div>
+
+                    <h2>Contextualização</h2>
+                    <p>O acesso aos dados da Câmara dos Deputados pode ser complexo e pouco intuitivo para grande parte
+                        da população.
+                        Eleitores, professores e jornalistas enfrentam dificuldades para localizar e interpretar
+                        informações relevantes, muitas vezes dispersas e sem uma visualização estruturada ou neutra.</p>
+
+                    <hr>
+
+                    <h2>Objetivo</h2>
+                    <p>Desenvolver uma aplicação web que centralize e simplifique o acesso aos dados da Câmara dos
+                        Deputados, permitindo que usuários, mesmo sem conhecimento técnico, consigam consultar e
+                        compreender essas informações de forma prática e eficiente.</p>
+
+                    <hr>
+
+                    <h2>Metodologia Aplicada</h2>
+                    <p>O desenvolvimento do projeto foi conduzido utilizando a metodologia ágil Scrum, estruturada em
+                        três sprints, cada uma com duração de três semanas.
+                        Ao final de cada ciclo, foram realizadas sprint reviews, permitindo a análise das entregas,
+                        identificação de melhorias e ajustes para as próximas etapas do desenvolvimento.</p>
+
+                    <hr>
+
+                    <h2>Minha Atuação</h2>
+                    <p>Atuei como Product Owner (PO), sendo responsável pela comunicação com o cliente, definição de
+                        requisitos e organização das entregas do projeto.
+                        Também contribui na estruturação do repositório no GitHub e na documentação, além de participar
+                        da definição da organização e apresentação dos dados na interface.</p>
+
+                    <hr>
+
+                    <h2>Resultados obtidos</h2>
+                    <p>O projeto resultou em uma aplicação em desenvolvimento que já permite a visualização de dados da
+                        Câmara dos Deputados de forma mais simples e acessível, facilitando o entendimento de
+                        informações complexas por diferentes perfis de usuários.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal projeto Monitoramento da Poluição -->
+    <div class="modal fade" id="modalPoluicao">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Monitoramento da Poluição Urbana</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="assets/images/site_poluicao2.png" alt="Monitoramento da Poluição" class="img-fluid mb-3">
+
+                    <div class="tags">
+                        <span class="badge bg-dt">HTML</span>
+                        <span class="badge bg-dt">CSS</span>
+                        <span class="badge bg-dt">JavaScript</span>
+                        <span class="badge bg-dt">Bootstrap</span>
+                        <span class="badge bg-dt">MYSQL</span>
+                    </div>
+
+                    <h2>Contextualização</h2>
+                    <p>A obtenção de dados atualizados sobre a poluição urbana nem sempre é acessível ou clara para a
+                        população.
+                        Informações sobre qualidade do ar, água e outros indicadores ambientais costumam estar dispersas
+                        ou apresentadas
+                        de forma pouco intuitiva, dificultando o acompanhamento e a conscientização dos usuários.</p>
+
+                    <hr>
+
+                    <h2>Objetivo</h2>
+                    <p>Desenvolver uma aplicação web capaz de centralizar e apresentar dados ambientais em tempo real,
+                        como qualidade
+                        do ar e outros indicadores, de forma clara e acessível. O projeto também busca conscientizar os
+                        usuários sobre
+                        práticas que contribuam para a redução da poluição no dia a dia.</p>
+
+                    <hr>
+
+                    <h2>Metodologia Aplicada</h2>
+                    <p>O desenvolvimento foi conduzido com base na organização e estruturação da interface a partir de
+                        protótipos
+                        elaborados no Figma, seguidos da implementação do front-end com foco na apresentação clara e
+                        eficiente dos dados.
+                        A construção do projeto priorizou a usabilidade e a organização das informações para facilitar a
+                        compreensão
+                        dos usuários.</p>
+
+                    <hr>
+
+                    <h2>Minha Atuação</h2>
+                    <p>Atuei no desenvolvimento do front-end da aplicação, sendo responsável pela criação do design no
+                        Figma e pela
+                        implementação da interface. Também participei da definição da estrutura do site e da organização
+                        dos dados
+                        apresentados, buscando uma experiência clara e intuitiva para o usuário.</p>
+
+                    <hr>
+
+                    <h2>Resultados obtidos</h2>
+                    <p>O projeto resultou em uma aplicação funcional capaz de exibir dados ambientais em tempo real, com
+                        uma interface
+                        organizada e de fácil compreensão. A solução contribui para o acompanhamento da poluição urbana
+                        e incentiva a
+                        conscientização dos usuários sobre questões ambientais.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Contato -->
     <section id="Contato">
         <div class="container">
             <h1>Contato</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe eveniet quas aperiam consequuntur, nulla voluptatem qui dignissimos sed reiciendis suscipit in rerum soluta accusamus vero sapiente architecto totam labore expedita!lorem
+            <br>
 
-            </p>
+            <div class="row align-items-center">
+                <!-- lado esquerdo -->
+                <div class="col-md-6 d-flex flex-column align-items-start">
+                    <img sty src="assets/images/frase_efeito.png" alt="Frase Vamos construir algo juntos!"
+                        class="frase-img img-fluid mt-3">
+                </div>
+
+                <!-- lado direito -->
+                <div class="col-md-6 linha">
+                    <div class="p-4 contact-box d-flex flex-column gap-3">
+
+                        <p><strong>Email:</strong> <span>mlavinia088@gmail.com</span> </p>
+
+                        <div>
+                            <i class="icon devicon-github-plain colored"></i>
+                            <a href="https://github.com/MartinsLavinia" class="link" target="_blank">GitHub</a>
+                        </div>
+
+                        <div>
+                            <img class="icon"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
+                                style="width:20px;">
+                            <a href="https://www.linkedin.com/in/lavinia-martins221/" class="link"
+                                target="_blank">LinkedIn</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
+
+    <footer class="custom-footer text-center py-4">
+
+        <h5 style="color:#2b82ce;">Lavinia Martins</h5>
+
+        <p class="mb-2">Desenvolvimento de sistemas • Full-Stack • Projetos acadêmicos</p>
+
+        <div class="mb-3">
+            <a href="https://github.com/MartinsLavinia" target="_blank" class="footer-link">GitHub</a> |
+            <a href="https://www.linkedin.com/in/lavinia-martins221/" target="_blank" class="footer-link">LinkedIn</a>
+        </div>
+
+        <small>© 2026 • Todos os direitos reservados</small>
+
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        function filtrar(tipo) {
-        const cards = document.querySelectorAll('.skill-card');
+        function filtrar(tipo, botaoClicado) {
+            const cards = document.querySelectorAll('.skill-card');
 
+            // filtro dos cards
             cards.forEach(card => {
                 const categoria = card.dataset.skill;
 
                 if (categoria === tipo) {
-                card.classList.remove('d-none');
+                    card.classList.remove('d-none');
                 } else {
-                card.classList.add('d-none');
+                    card.classList.add('d-none');
                 }
             });
-            }
 
-            // já começa mostrando hard skills
-            document.addEventListener('DOMContentLoaded', () => {
-            filtrar('hard');
+            // controle do botão ativo
+            const botoes = document.querySelectorAll('.btn-filtro');
+
+            botoes.forEach(btn => {
+                btn.classList.remove('btn-destaque');
+            });
+
+            botaoClicado.classList.add('btn-destaque');
+        }
+
+        // inicia com hard ativo
+        document.addEventListener('DOMContentLoaded', () => {
+            const botaoInicial = document.querySelector('.btn-filtro');
+            filtrar('hard', botaoInicial);
         });
-</script>
+    </script>
 </body>
+
 </html>
